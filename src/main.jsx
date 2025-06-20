@@ -7,12 +7,23 @@ import { BrowserRouter } from 'react-router-dom';
 // ✅ Import your StoreContextProvider
 import StoreContextProvider from './context/StoreContext'; // make sure path is correct
 
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <BrowserRouter>
+//       <StoreContextProvider>
+//         <App />
+//       </StoreContextProvider>
+//     </BrowserRouter>
+//   </StrictMode>
+// );
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <StoreContextProvider>
         <App />
       </StoreContextProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
+
